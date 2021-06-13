@@ -1,0 +1,335 @@
+*{
+    margin: 0% ;
+    padding: 0%;
+}
+
+.content{
+    background-color: white;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+/*/////////////////////////////////////////// Header y NAV */
+.header{   
+    height:30% ;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerInferior {
+    background-color: #FCFCFE;
+    height: 80%;
+    width: 100%;
+    display: flex; 
+}
+
+.headerInferior img{
+    height: 20%;
+    width: 20%;
+}
+
+.navInformativa{
+    display: flex;
+    background-color: steelblue;
+    height: 20%;
+    width: 100%;
+}
+
+.navInformativa a{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: #FCFCFE;
+    width: 100%;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.navInformativa img{
+    height: 1.5em;
+    width: 1.5em;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color:steelblue;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+/*////////////////////////////////////////////////FOOTER*/
+
+footer{
+    height: 20%;
+    width: 100%;
+    background-image: url("/img/fondofooter.jpg");
+    background-position:top;
+    display: flex;   
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.footerA{
+    color:black;
+    text-decoration: none;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2vw;
+}
+
+.footer1{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width: 25%;
+    height: 100%;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.footer2{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width: 25%;
+    height: 100%;
+}
+
+.footer3{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width: 25%;
+    height: 100%;
+}
+
+.footer4{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width: 25%;
+    height: 100%;
+}
+
+footer img{
+    height: 25%;
+    width: 25%;
+}
+
+footer h5,p{
+    font-size: 1.2vw;
+}
+
+/*////////////////////////////////////////////////////// JUGUETES.html FARMACIA.html*/
+
+
+
+.seccionPrincipalProductos{
+    background-color: white;
+    min-height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navCarrito{
+    width: 100%;
+    height: 25%;
+    background-color: white;
+    display: flex;
+    padding-right: 5rem;
+}
+
+.navCarrito span{
+    text-align: center;
+    border-radius: 1.2rem;
+    background-color: red;
+    color: white;
+    width: 5%;
+    height: 50%;
+}
+
+
+.IndexCatalogo{
+    width: 100%;
+    min-height: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+    margin:2em 0 5em 0;
+}
+
+.seccionfiltros{
+    width: 15%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:solid grey 0.1em;
+    padding: 0.5em;
+}
+.seccionCartas{
+    width: 85%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    
+}
+
+
+
+
+/*///////////////////////////////////////////////// CONTACTENOS.HTML*/
+.mainContactenos{
+    height: 90vh;
+    width: 100vw;
+    background-image: url("/img/Fondos/1.jpg");
+    background-position:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainFormulario{
+    min-height: 80%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20rem;
+    padding: 0 2em 0 2em;
+    background-color: cadetblue;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formDiv div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    gap: 0.2rem;
+    width: 100%;
+}
+
+/*///////////////////////////////////////INDEX.HTML/////////*/
+
+.indexGeneral{
+    height: 100vw;
+    width: 100%;  
+}
+
+.index1Main{
+    height: 20%;
+    width: 100%;
+    
+}
+
+.index2Main{
+    display: flex;
+    height: 40%;
+    width: 100%;
+    
+}
+
+.index2Main1{
+    height: 100%;
+    width: 50%;
+    
+}
+
+.index2Main2{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.index2Main2Div{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.index2Main1{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.index3Main{
+    display: flex;
+    height: 40%;
+    width: 100%;
+}
+
+
+.index3Main1{
+    height: 100%;
+    width: 50%;
+    display: flex;
+}
+
+.index3Main1Tarjetas{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.index3Main1Tarjetas h4,p{
+    font-size: 1.0vw;
+}
+
+.mitad{
+    width: 80%;
+    height:50%;
+}
+
+.index3Main2{
+    height: 100%;
+    width: 50%;
+    background-color: orchid;
+}
+
+.index3Main2 img{
+    width: 100%;
+    height: 100%;
+}
+/*/////////////////////////////////////////////////////////////*/
+
+.indexCarrito{
+    min-height: 80vh;
+    min-width: 90vw;
+    display: flex;
+    justify-content: space-around;
+    border: 25rem;
+    padding: 2rem;
+}
+
+.tabla{
+    min-height: 80%;
+    width: 75%;
+}
+
+.divFinalizarCompra{
+    min-height: 80%;
+    width: 20%;
+}
+
+.divVaciarCarrito{
+    display: flex;
+    justify-content: flex-end;
+}
+/*/////////////////////////////////////////////////////////////   configurar MODAL ////*/
+
