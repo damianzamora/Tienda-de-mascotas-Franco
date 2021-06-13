@@ -1,7 +1,6 @@
 let juguetes = document.getElementById("juguetes")
 let farmacia = document.getElementById("farmacia")
-let modal = document.getElementById("myModal");
-//var span = document.getElementsByClassName("close")[0];
+
 
 const app = Vue.createApp({
     data (){
