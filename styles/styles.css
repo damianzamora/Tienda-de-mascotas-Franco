@@ -65,7 +65,7 @@
 footer{
     height: 20%;
     width: 100%;
-    background-image: url("./img/fondofooter.jpg");
+    background-image: url("/img/fondofooter.jpg");
     background-position:top;
     display: flex;   
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -187,7 +187,7 @@ footer h5,p{
 .mainContactenos{
     height: 90vh;
     width: 100vw;
-    background-image: url("./img/Fondos/1.jpg");
+    background-image: url("/img/Fondos/1.jpg");
     background-position:center;
     display: flex;
     justify-content: center;
