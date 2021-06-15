@@ -79,6 +79,26 @@ const app = Vue.createApp({
                 this.contador=0;
                 localStorage.setItem("Contador",this.contador);
             },
+            comprarCarrito(){
+                this.precioTotal=localStorage.getItem("PrecioTotal");
+                if(this.precioTotal!=0){
+                swal("Compra realizada","Ahora,chequea tu casilla de e-mail","success");
+                this.vaciarCarrito();
+                }
+                else
+                swal("No se puede realizar una compra","No tienes articulos en tu carrito","error");
+            },eliminarItem(Item){
+
+                var i = this.carrito.indexOf( Item );
+                this.precioTotal=this.precioTotal-Item.precio
+                this.carrito.splice( i, 1 );
+                this.contador=localStorage.getItem("Contador")
+                this.contador--
+                localStorage.setItem("Contador",this.contador);
+                localStorage.setItem("PrecioTotal",this.precioTotal);
+                const myJSON = JSON.stringify(this.carrito);
+                localStorage.setItem("testJSON", myJSON);
+            },
         },
         computed:{
             carritoLocalStorage(){
