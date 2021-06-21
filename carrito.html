@@ -11,52 +11,32 @@
 </head>
 <body>
     <div class="content">
+      <div class="row">
         <header>
-            <div class="header">
-                <div class="navInformativa">
-                    
-                    <a class="nav-link active" aria-current="page" href="#mapa" > <img src="img/ubicacion.jpg">Rio de Janeiro 300 - Caballito - CABA</a>  
-                </div>
-                    <div class="headerInferior">
-                        <img src="./img/schnauzerHeader.jpg">
-                        <div class="titulo">
-    
-                            <h2>FRANCO</h2>
-                            <h4>Tienda de mascotas</h4>  
-                        
-                        </div>
+              <div class="col-sm-12">
+                    <div class="navInformativa">
+                        <a class="nav-link active" aria-current="page" href="/index.html" > <img src="img/ubicacion.jpg">Rio de Janeiro 300 - Caballito - CABA</a>  
                     </div>
-            </div>
-        </header>
-            <nav class="  navbar navbar-expand-lg navbar-light bg-light  ">
-                <div class="container-fluid">
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="farmacia.html">Farmacia</a>
-                      </li>
-                      
-                      <li class="nav-item">
-                        <a class="nav-link" href="juguetes.html">Juguetes</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="contactenos.html">Contactenos</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="subscribite.html">Inscribite</a>
-                      </li>
-                    </ul>
-                    
-                  </div>
-                </div>
-            </nav>  
+                        <div class="headerInferior">
+                            <img src="./img/schnauzerHeader.jpg">
+                            <div class="titulo">
+        
+                                <h2>FRANCO</h2>
+                                <h4>Tienda de mascotas</h4> 
+                            </div>
+                        </div>
+              </div>           
+            </header>
+        </div> 
+        <div class="nav">
+          <div class="nav navbar-light bg-light w-100 ">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="farmacia.html">Farmacia</a>
+            <a class="nav-link" href="juguetes.html">Juguetes</a>
+            <a class="nav-link" href="contactenos.html">Contactenos</a>
+            <a class="nav-link" href="subscribite.html">Subscribite</a> 
+        </div>  
+      </div>
             <main id="app">    
                 <div class="indexCarrito">
                   <div class="tabla">
@@ -71,7 +51,7 @@
                             </thead>
                             <tbody>
                                   <tr v-for="post in carritoLocalStorage">
-                                        <td ><img v-bind:src=post.imagen alt="cartaProductoimg" class="w-25 p-1" ></td>
+                                        <td ><img id="carImg" v-bind:src=post.imagen alt="cartaProductoimg" class="w-25 p-1" ></td>
                                         <td class="w-25 p-3" >{{post.nombre}}</td>
                                         <td class="w-25 p-3">${{post.precio}}</td>
                                         <td class="w-25 p-3"><button class="btn btn-danger" @click="eliminarItem(post)">Quitar</button></td>
@@ -96,7 +76,7 @@
                             <img class="card-img-top" src="img/CompraProtegida.png" alt="Card image cap">
                             <div class="card-body">
                               <h4 class="card-title text-center" >${{totalLocalStorage}}</h4>
-                              <p class="card-text">Envios gratis a CABA y al rededores</p>
+                              <h5 class="card-text">Envios gratis a CABA y al rededores</h5>
                               <button class="btn btn-primary " @click="comprarCarrito" >Finalizar Compra</button>
                             </div>
                           </div>

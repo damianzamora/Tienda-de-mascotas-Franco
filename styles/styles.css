@@ -4,35 +4,33 @@
 }
 
 .content{
-    background-color: white;
     min-height: 100vh;
     max-width: 100vw;
+    display: flex;
+    flex-direction: column;
 }
 
+
+
 /*/////////////////////////////////////////// Header y NAV */
-.header{   
-    height:30% ;
-    width: 100%;
+header{   
+    min-height:25vh ;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .headerInferior {
     background-color: #FCFCFE;
-    height: 80%;
+    height: 100%;
     width: 100%;
     display: flex; 
-}
-
-.headerInferior img{
-    height: 20%;
-    width: 20%;
 }
 
 .navInformativa{
     display: flex;
     background-color: steelblue;
-    height: 20%;
+    height: 30%;
     width: 100%;
 }
 
@@ -60,15 +58,81 @@
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
+.nav{
+    max-width: 100vw;
+    height: 50%;
+    background-color: #FCFCFE;
+    
+}
+
+#navA{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2rem;
+}
+ 
+
+.nav a{
+    color: steelblue;
+}
+/*//////////////////////////////////////////////////
+index*/
+
+.indexGeneral{
+    min-height: 100vh;
+    max-width: 100vw;
+    
+    
+}
+
+.index2Main{
+    display: flex;
+    
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+}
+
+.index2Main1{
+    min-height: 100%;
+    width: 50%;
+}
+
+.index2Main2{
+    height: 100%;
+    width: 50%;
+    
+}
+
+.index2Main2Div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.index2Main2Div p{
+    width: 100%;
+}
+
+.index3Main1{
+    display: flex;
+    padding-left: 5rem;
+    
+}
+
+
+
 /*////////////////////////////////////////////////FOOTER*/
 
 footer{
-    height: 20%;
-    width: 100%;
-    
-    background-position:top;
+    height: 20vh;
+    max-width: 100%;
     display: flex;   
     font-family:Georgia, 'Times New Roman', Times, serif;
+    background-image: url("/img/fondofooter.jpg");
 }
 
 .footerA{
@@ -133,6 +197,7 @@ footer h5,p{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: mintcream;
 }
 
 .navCarrito{
@@ -143,14 +208,6 @@ footer h5,p{
     padding-right: 5rem;
 }
 
-span{
-    text-align: center;
-    border-radius: 1.2rem;
-    background-color: red;
-    color: white;
-    width: 5%;
-    height: 50%;
-}
 
 
 .IndexCatalogo{
@@ -191,6 +248,7 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(/img/Fondo.jpg);
 }
 
 .mainFormulario{
@@ -215,97 +273,10 @@ span{
     width: 100%;
 }
 
-/*///////////////////////////////////////INDEX.HTML/////////*/
-
-.indexGeneral{
-    height: 100vw;
-    width: 100%;  
-}
-
-.index1Main{
-    height: 20%;
-    width: 100%;
-    
-}
-
-.index2Main{
-    display: flex;
-    height: 40%;
-    width: 100%;
-    
-}
-
-.index2Main1{
-    height: 100%;
-    width: 50%;
-    
-}
-
-.index2Main2{
-    height: 100%;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.index2Main2Div{
-    width: 80%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-}
 
 
-.index2Main1{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-
-.index3Main{
-    display: flex;
-    height: 40%;
-    width: 100%;
-}
-
-
-.index3Main1{
-    height: 100%;
-    width: 50%;
-    display: flex;
-}
-
-.index3Main1Tarjetas{
-    width: 100%;
-    height: 100%;
-    text-align: center;
-}
-
-.index3Main1Tarjetas h4,p{
-    font-size: 1.0vw;
-}
-
-.mitad{
-    width: 80%;
-    height:50%;
-}
-
-.index3Main2{
-    height: 100%;
-    width: 50%;
-    background-color: orchid;
-}
-
-.index3Main2 img{
-    width: 100%;
-    height: 100%;
-}
-/*/////////////////////////////////////////////////////////////*/
+/*////////////////////////////  CARRITO  /////////////////////////////////*/
 
 .indexCarrito{
     min-height: 80vh;
@@ -314,6 +285,8 @@ span{
     justify-content: space-around;
     border: 25rem;
     padding: 2rem;
+    background-color: mintcream;
+    
 }
 
 .tabla{
@@ -330,5 +303,117 @@ span{
     display: flex;
     justify-content: flex-end;
 }
-/*/////////////////////////////////////////////////////////////   configurar MODAL ////*/
+/*/////////////////////////////////////////////////////////////   @mediaQuery ////*/
+
+
+@media screen and (max-width: 700px) {
+
+    .nav{
+        width: 100vw;
+        height: 50%;
+        background-color: #FCFCFE;
+        
+    }
+
+   
+
+    .index3Main1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .index2Main{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        width: 100%;
+        
+    }
+
+    .index2Main1{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .index2Main2{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+   #navA{
+       display: flex;
+       width: 100%;
+       justify-content: center;
+   }
+
+.IndexCatalogo{
+    width: 100%;
+    min-height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5em;
+    margin:2em 0 5em 0;
+}
+
+.seccionfiltros{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:solid grey 0.1em;
+    padding: 0.5em;
+}
+.seccionCartas{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    
+}
+.navCarrito{
+    width: 100%;
+    height: 25%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding-right: 5rem;
+}
+.indexCarrito{
+    min-height: 80vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: mintcream;
+    gap:3rem;
+    
+}
+
+.tabla{
+    min-height: 80%;
+    width: 100%;
+}
+
+.divFinalizarCompra{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-end;
+    gap:4rem;
+    width: 100%;
+}
+
+
+    
+}
 
