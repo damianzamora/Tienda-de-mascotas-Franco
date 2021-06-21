@@ -55,7 +55,7 @@ header{
     background-position:center;
     display: flex;
     flex-direction: column;
-    background-image: url(/img/Fondo.jpg);
+    background-image: url(https://github.com/damianzamora/PETSHOP-Franco/tree/master/img/Fondo.jpg);
     align-items: center;
     
       
@@ -139,7 +139,7 @@ label {width: 100px;}
         background-position:center;
         display: flex;
         flex-wrap: wrap;
-        background-image: url(/img/Fondo.jpg);
+        background-image: url("https://github.com/damianzamora/PETSHOP-Franco/tree/master/img/Fondo.jpg");
     }
     
     .mainFormulario{
@@ -161,7 +161,7 @@ label {width: 100px;}
         margin: 1rem;
         color:white;
     }
-
     
+
   }
 
