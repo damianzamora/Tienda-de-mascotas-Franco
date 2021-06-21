@@ -132,7 +132,7 @@ footer{
     max-width: 100%;
     display: flex;   
     font-family:Georgia, 'Times New Roman', Times, serif;
-    background-image: url("/img/fondofooter.jpg");
+    background-image: url('../img/fondofooter.jpg');
 }
 
 .footerA{
