@@ -55,7 +55,7 @@ header{
     background-position:center;
     display: flex;
     flex-direction: column;
-    background-image: url(https://github.com/damianzamora/PETSHOP-Franco/tree/master/img/Fondo.jpg);
+    background-image: url('../img/Fondo.jpg');
     align-items: center;
     
       
@@ -87,7 +87,7 @@ footer{
     max-width: 100%;
     display: flex;   
     font-family:Georgia, 'Times New Roman', Times, serif;
-    background-image: url("/img/fondofooter.jpg");
+    background-image: url('../img/fondofooter.jpg');
 }
 
 .footerA{
@@ -139,7 +139,7 @@ label {width: 100px;}
         background-position:center;
         display: flex;
         flex-wrap: wrap;
-        background-image: url("https://github.com/damianzamora/PETSHOP-Franco/tree/master/img/Fondo.jpg");
+        background-image: url('../img/fondofooter.jpg');
     }
     
     .mainFormulario{
