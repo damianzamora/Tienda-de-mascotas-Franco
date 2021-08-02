@@ -12,101 +12,89 @@
 
 <body id="farmacia">
   <div class="content" id="app">
-  <div class="row">
     <header>
-          <div class="col-sm-12">
-                <div class="navInformativa">
-                    <a class="nav-link active" aria-current="page" href="/index.html" > <img src="img/ubicacion.jpg">Rio de Janeiro 300 - Caballito - CABA</a>  
-                </div>
-                    <div class="headerInferior">
-                        <img src="./img/schnauzerHeader.jpg">
-                        <div class="titulo">
-    
-                            <h2>FRANCO</h2>
-                            <h4>Tienda de mascotas</h4> 
-                        </div>
-                    </div>
-          </div>           
-        </header>
-    </div> 
-    <div class="nav">
-      <div class="nav navbar-light bg-light w-100 ">
-        <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link" href="farmacia.html">Farmacia</a>
-        <a class="nav-link" href="juguetes.html">Juguetes</a>
-        <a class="nav-link" href="contactenos.html">Contactenos</a>
-        <a class="nav-link" href="subscribite.html">Subscribite</a> 
-        <div class="nav navbar-light bg-light w-100 ">
-          <a id="navA" href="carrito.html"><img src="img/agregarCarrito.png"><button class="btn btn-danger">{{contadorLocalStorage}}</button></a>
-        </div> 
-    </div>  
-      
+      <div class="navInformativa">
+          <a class="nav-link active" aria-current="page" href="/index.html" > <img src="img/ubicacion.jpg">Rio de Janeiro 300 - Caballito - CABA</a>  
+      </div>
+      <div class="headerInferior">
+          <img src="./img/schnauzerHeader.jpg">
+          <div class="titulo">
+              <h2>FRANCO</h2>
+              <h4>Tienda de mascotas</h4> 
+          </div>
+      </div>                        
+    </header>
+    <div class="nav">       
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="farmacia.html">Farmacia</a>
+          <a class="nav-link" href="juguetes.html">Juguetes</a>
+          <a class="nav-link" href="contactenos.html">Contactenos</a>
+          <a class="nav-link" href="subscribite.html">Subscribite</a> 
+          <div class="nav navbar-light bg-light w-100 ">
+            <a id="navA" href="carrito.html"><img src="img/agregarCarrito.png"><button class="btn btn-danger">{{contadorLocalStorage}}</button></a>
+          </div> 
   </div>
-      
-    
-        <main >
-          <div class="navCarrito">
+  <main >
+      <div class="navCarrito">
             <div class="d-flex justify-content-center w-100 p-3">
                 <h2>Catálogo</h2>
-            </div>
-            
-            
+            </div>           
       </div>
           <div class="seccionPrincipalProductos">
-          
-          <section class="IndexCatalogo">
-              <div class="seccionfiltros">
-                  <div><h5>Filtros</h5></div>
-                  <form>
-                    <div>
-                    <input v-model="filtro" type="radio" name="filtro" value="PrecioMayor" id="PrecioMayor"/><label >Precio mayor</label>
+              <section class="IndexCatalogo">
+                  <div class="seccionfiltros">
+                      <div><h5>Filtros</h5></div>
+                      <form > 
+                            <div class="divFiltros">
+                            <input v-model="filtro" type="radio" name="filtro" value="PrecioMayor" id="PrecioMayor"/><label class="w-100" >Precio mayor</label>
+                            </div>
+                            <div class="divFiltros">
+                            <input v-model="filtro" type="radio" name="filtro" value="PrecioMenor" id="PrecioMenor"/><label class="w-100">Precio menor</label>
+                            </div>
+                            <div class="divFiltros">
+                                <input v-model="filtro" type="radio" name="filtro" value="MayorStock" id="MayorStock"/><label class="w-100">Mayor stock</label>
+                            </div>
+                            <div class="divFiltros">
+                                <input v-model="filtro" type="radio" name="filtro" value="MenorStock" id="MenorStock"/><label class="w-100">Menor stock</label>
+                            </div>
+                      </form> 
+                  </div>
+                  <div class="seccionCartas">   
+                    <div class="card" style="width: 18rem;" v-for="post in Filtrados">
+                        <img v-bind:src=post.imagen alt="cartaProductoimg" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title text-center">{{post.nombre}}</h5>
+                          <p class="card-text" v-if=!esVisible>{{post.descripcion}} </p>
+                          <h5 class="text-center">${{post.precio}}</h5>
+                          <div class="d-flex justify-content-center">
+                          <button  @click="sumarAcarrito(post)" class="btn btn-primary " >Agregar al carrito</button>
+                        </div>
+                        </div>
                     </div>
-                    <div>
-                    <input v-model="filtro" type="radio" name="filtro" value="PrecioMenor" id="PrecioMenor"/><label >Precio menor</label>
-                   </div>
-                   <div>
-                      <input v-model="filtro" type="radio" name="filtro" value="MayorStock" id="MayorStock"/><label >Mayor stock</label>
                   </div>
-                  <div>
-                      <input v-model="filtro" type="radio" name="filtro" value="MenorStock" id="MenorStock"/><label >Menor stock</label>
-                  </div>
-                  </form>   
-                  
-              </div>
-          <div class="seccionCartas">   
-            <div class="card" style="width: 18rem;" v-for="post in Filtrados">
-              <img v-bind:src=post.imagen alt="cartaProductoimg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title text-center">{{post.nombre}}</h5>
-                <p class="card-text" v-if=!esVisible>{{post.descripcion}} </p>
-                <h5 class="text-center">${{post.precio}}</h5>
-                <div class="d-flex justify-content-center">
-                <button  @click="sumarAcarrito(post)" class="btn btn-primary " >Agregar al carrito</button>
-              </div>
-              </div>
-            </div>
-          </div>
+              </section>
           </div> 
-          </section>
-      </div>   
-       
       </main>   
-    <footer>
+      <footer>
         <div class="footer1">
-          <p>TIENDA DE MASCOTAS - FRANCO</p>
-          <h5>info@tiendafranco.com.ar</h5>
+            <span>TIENDA DE MASCOTAS - FRANCO</span>
+            <span>info@tiendafranco.com.ar</span>
+            <span>Rio de Janeiro 300 - Caballito</span>
         </div>
-        <div class="footer3">
-           <a class="footerA"  href="subscribite.html" >Inscribite para recibir novedades!<img src="./img/formularioFooter.png"></a>
-        </div>
-        <div class="footer4">
-          <a class="footerA"  href="juguetes.html" >Juguetes </a>
-          <a class="footerA"  href="farmacia.html" >Farmacia </a> 
-        </div>
-    </footer>
+            <div class="footer2">
+              <span>Contactanos</span>
+              <span>+5491158539833</span>
+            </div>             
+            <div class="footer3">
+              <a class="footerA"  href="juguetes.html" >Juguetes </a>
+              <a class="footerA"  href="farmacia.html" >Farmacia </a>
+              <a class="footerA"  href="contactenos.html" >Contactenos </a>
+              <a class="footerA"  href="subscribite.html" >Subscribite! </a> 
+            </div>
+      </footer>
+      </div>
     <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="js/app.js"></script>
-  </div>
   </body>
-
 </html>

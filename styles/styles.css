@@ -10,11 +10,12 @@
     flex-direction: column;
 }
 
+label { width: 5em; } 
 
 
 /*/////////////////////////////////////////// Header y NAV */
 header{   
-    min-height:25vh ;
+    height:25vh;
     max-width: 100%;
     display: flex;
     flex-direction: column;
@@ -59,7 +60,9 @@ header{
 }
 
 .nav{
-    max-width: 100vw;
+    display: flex;
+    
+    max-width: 100vw ;
     height: 50%;
     background-color: #FCFCFE;
     
@@ -83,12 +86,16 @@ index*/
     min-height: 100vh;
     max-width: 100vw;
     
-    
 }
+
+.index1Main{
+    width: 100%;
+    height: 30%;
+}
+
 
 .index2Main{
     display: flex;
-    
     width: 100%;
     height: 100%;
     padding: 2rem;
@@ -119,7 +126,8 @@ index*/
 
 .index3Main1{
     display: flex;
-    padding-left: 5rem;
+    width: 100%;
+    justify-content: space-around;
     
 }
 
@@ -128,62 +136,57 @@ index*/
 /*////////////////////////////////////////////////FOOTER*/
 
 footer{
-    height: 20vh;
+    height: 25vh;
     max-width: 100%;
-    display: flex;   
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    background-image: url('../img/fondofooter.jpg');
+    display: flex;  
+    background-color: steelblue;
+}
+
+
+.footer1{
+    width: 33%;
+    height: 100%;
+    padding-left: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+.footer2{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    
+}
+
+
+
+.footer3{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
 }
 
 .footerA{
-    color:black;
+    color:white;
     text-decoration: none;
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 1.2vw;
 }
 
-.footer1{
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items:center;
-    width: 25%;
-    height: 100%;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-}
 
-.footer2{
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    width: 25%;
-    height: 100%;
-}
-
-.footer3{
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    width: 25%;
-    height: 100%;
-}
-
-.footer4{
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items:center;
-    width: 25%;
-    height: 100%;
-}
-
-footer img{
-    height: 25%;
-    width: 25%;
-}
-
-footer h5,p{
-    font-size: 1.2vw;
+footer span{
+    color: white;
+    size: 2em;
 }
 
 /*////////////////////////////////////////////////////// JUGUETES.html FARMACIA.html*/
@@ -236,44 +239,47 @@ footer h5,p{
     gap: 5rem;
     
 }
+.divFiltros{
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+}
 
 
 
 
 /*///////////////////////////////////////////////// CONTACTENOS.HTML*/
+
 .mainContactenos{
-    height: 90vh;
-    width: 100vw;
+    height: 70%;
+    width: 100%;
     background-position:center;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    background-image: url('../img/Fondo.jpg');
     align-items: center;
-    background-image: url(/img/Fondo.jpg);
 }
 
 .mainFormulario{
-    min-height: 80%;
-    width: 70%;
+    height: 50%;
+    width: 100vh;
     display: flex;
-    flex-direction: column;
-    border-radius: 20rem;
-    padding: 0 2em 0 2em;
-    background-color: cadetblue;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color:steelblue;
+    opacity: 0.8;
+    margin:1rem;
 }
 
 .formDiv div{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem;
-    gap: 0.2rem;
-    width: 100%;
+    height: 70%;
+    max-width: 100%;
+    margin: 0.5rem;
+    color:white;
+
 }
-
-
 
 
 /*////////////////////////////  CARRITO  /////////////////////////////////*/
@@ -286,7 +292,6 @@ footer h5,p{
     border: 25rem;
     padding: 2rem;
     background-color: mintcream;
-    
 }
 
 .tabla{
@@ -303,11 +308,29 @@ footer h5,p{
     display: flex;
     justify-content: flex-end;
 }
-/*/////////////////////////////////////////////////////////////   @mediaQuery ////*/
 
+.formCarrito{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*/////////////////////////////////////////////////////////////   @mediaQuery ////*/
+/*/////////////////////////////////////////////////////////////   @mediaQuery ////*/
+/*/////////////////////////////////////////////////////////////   @mediaQuery ////*/
+/*/////////////////////////////////////////////////////////////   @mediaQuery ////*/
 
 @media screen and (max-width: 700px) {
 
+
+/*//////////////////////////INDEX.HTML////////////*/
     .nav{
         width: 100vw;
         height: 50%;
@@ -315,12 +338,12 @@ footer h5,p{
         
     }
 
-   
-
-    .index3Main1{
-        display: flex;
-        flex-direction: column;
+    .index1Main{
+        width: 100%;
+        height: 100%;
     }
+
+    
 
     .index2Main{
         display: flex;
@@ -343,15 +366,30 @@ footer h5,p{
         width: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center;   
+    }
+
+    .index3Main1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .index3Main1{
+        display: flex;
+        width: 100%;
+        padding: 0;
+        
         
     }
+    
 
    #navA{
        display: flex;
        width: 100%;
        justify-content: center;
    }
+
+   /*/////////////////////////// FARMACIA , JUGUETES ///////////////*/
 
 .IndexCatalogo{
     width: 100%;
@@ -395,9 +433,12 @@ footer h5,p{
     display: flex;
     flex-direction: column;
     background-color: mintcream;
+    border: 0;
+    padding: 0;
     gap:3rem;
-    
 }
+
+
 
 .tabla{
     min-height: 80%;
@@ -408,11 +449,66 @@ footer h5,p{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:flex-end;
+    align-items:center;
     gap:4rem;
     width: 100%;
 }
 
+thead {
+    display: none;
+}
+
+/*////////////////////////contactenos subscribite////////////*/
+
+.mainContactenos{
+    min-height: 90vh;
+    max-width: 100%;
+    background-position:center;
+    display: flex;
+    background-image: url('../img/Fondo.jpg');
+}
+
+.mainFormulario{
+    min-height: 80%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:steelblue;
+    opacity: 0.8;
+    
+      
+}
+
+.formDiv div{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 1rem;
+    color:white;
+}
+
+
+
+/*////////////////////FOOTER/////////////////*/
+
+footer  span{
+    color: white;
+    font-size: small;
+}
+.footerA{
+    color:white;
+    text-decoration: none;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: small;
+}
+.footer1{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
     
 }

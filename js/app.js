@@ -37,6 +37,7 @@ const app = Vue.createApp({
             },
                 alertaContactenos(){
                 swal("Bien hecho!", "Tu consulta será respondida a la brevedad!", "success");
+                
             },
             alertaSubs(){
                 swal("Bien hecho!","Datos Recibidos! Ahora,chequea tu casilla de e-mail","success");
@@ -66,7 +67,8 @@ const app = Vue.createApp({
                         localStorage.setItem("testJSON", myJSON);
                         localStorage.setItem("PrecioTotal",this.precioTotal);  
                         localStorage.setItem("Contador",this.contador)
-                    }    
+                    } 
+                swal("Unidad agregada al Carrito","puede seguir agregando","success");      
                 
             },
             vaciarCarrito(){
